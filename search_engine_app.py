@@ -58,7 +58,7 @@ def main():
     st.title("Optimizing Semantic Search for Movie Subtitles")
 
     # Load data and prepare collection
-    df = pd.read_csv("half_subs_clean.csv", nrows=5000)
+    df = pd.read_csv("subtitles_search_engine.csv", nrows=25000)
     df['name'] = df['name'].str.replace('.', ' ').str.replace('eng 1cd', '').str.title().str.strip()
     ids = [str(i) for i in range(1, len(df) + 1)]
     df['id'] = ids
